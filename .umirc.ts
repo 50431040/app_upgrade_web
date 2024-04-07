@@ -7,28 +7,25 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: {
-    title: '@umijs/max',
+    title: 'App Upgrade',
   },
   routes: [
     {
+      name: 'home',
       path: '/',
-      redirect: '/home',
+      component: '@/pages/Home',
     },
     {
-      name: '首页',
-      path: '/home',
-      component: './Home',
-    },
-    {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
-    },
-    {
-      name: ' CRUD 示例',
+      name: 'appManagement',
       path: '/table',
-      component: './Table',
+      component: '@/pages/Table',
     },
   ],
   npmClient: 'yarn',
+  sassLoader: {},
+  locale: {
+    default: 'zh-CN',
+    baseSeparator: '-',
+    title: true,
+  },
 });
