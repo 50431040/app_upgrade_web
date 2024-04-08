@@ -20,6 +20,12 @@ export default defineConfig({
       path: '/table',
       component: '@/pages/Table',
     },
+    {
+      name: 'register',
+      path: '/register',
+      component: '@/pages/Register',
+      layout: false,
+    },
   ],
   npmClient: 'yarn',
   sassLoader: {},
